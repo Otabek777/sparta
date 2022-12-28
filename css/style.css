@@ -1556,7 +1556,7 @@ ul, ol {
     position: relative;
   }
   .banner .main_btn {
-    top: 278px;
+    top: 260px;
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
