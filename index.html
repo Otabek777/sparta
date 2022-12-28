@@ -37,9 +37,9 @@
                         <p class="header__map">ул. Первомайская, 198</p>
                         <a href="tel:8 (901) 459 40 06" class="header__phone">8 (901) 459 40 06</a>
                     </div>
-                    <button class="main_btn">
+                    <a href="#services" class="main_btn">
                         <span>оставить заявку</span>
-                    </button>
+                    </a>
                 </div>
                 <button class="header__burgir">
                     <span>
@@ -63,9 +63,9 @@
     </header>
     <main class="main">
         <section class="banner">
-            <button class="main_btn">
+            <a href="#services" class="main_btn">
                 <span>оставить заявку</span>
-            </button>
+            </a>
         </section>
         <section class="weapons">
             <div class="container">
@@ -93,9 +93,9 @@
                     </a>
                 </div>
                 <div class="weapons__btn">
-                    <button class="main_btn">
+                    <a href="#services" class="main_btn">
                         <span>стрелять</span>
-                    </button>
+                    </a>
                 </div>
             </div>
         </section>
@@ -119,7 +119,7 @@
                 </div>
             </div>
         </section>
-        <section class="services">
+        <section class="services" id="services">
             <div class="container">
                 <div class="title_h2">
                     <p class="h2">Услуги</p>
@@ -450,6 +450,23 @@
                             <p class="price">13 000р</p>
                         </div>
                     </div>
+                    <div class="services2__block">
+                        <div class="wrap_top">
+                            <p class="title">Программа по 30-40 минут</p>
+                        </div>
+                        <div class="wrap_bottom">
+                            <div class="wrap">
+                                <ul class="ul">
+                                    <li class="li"><p class="h5">Программа №1</p></li>
+                                    <li class="li">Появление мягкого и милого кролика</li>
+                                    <li class="li">Горящая трость</li>
+                                    <li class="li">Фокусник изо рта вытягивает бумажную ленту в 20 метров</li>
+                                    <li class="li">Из огня появляются конфеты/мыльные пузыри/Ваш небольшой подарок</li>
+                                </ul>
+                            </div>
+                            <p class="price">10 000р</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="services2__bottom">
                     <p class="h6">В каждую программу можно вносить изменения на Ваше усмотрение. Программа учитывается под возраст и количества детей. Интересно будет каждому!</p>
@@ -600,14 +617,23 @@
     <script src="js/SmoothScroll.js"></script>
     <script src="js/main.js"></script>
     <script>
-        if (window.innerWidth < 768) {
-            $('.services2__box').slick({
+         $('.services2__box').slick({
                 infinite: true,
-                slidesToShow: 1,
+                slidesToShow: 3,
                 slidesToScroll: 1,
                 dots: false,
+                responsive: [
+                    {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+                    }
+                ]
             });
-        };
+        // if (window.innerWidth < 768) {
+           
+        // };
     </script>
 </body>
 </html>
